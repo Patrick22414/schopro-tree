@@ -7,8 +7,10 @@ class BinTreeNode
 public:
 	BinTreeNode();
 	BinTreeNode(const Node_T& xdata);
-	BinTreeNode(const BinTreeNode& copy);
+	BinTreeNode(const BinTreeNode& copy); // copy constructor
+	// BinTree is a friend of BinTreeNode, and thus has full access to its private members.
 	template< typename Tree_T > friend class BinTree;
+	
 private:
 	Node_T data;
 	BinTreeNode< Node_T >* parent;
@@ -17,14 +19,14 @@ private:
 };
 
 template< typename Node_T >
-BinTreeNode::BinTreeNode() {
+BinTreeNode< Node_T >::BinTreeNode() {
 	parent = NULL;
 	lchild = NULL;
 	rchild = NULL;
 }
 
 template< typename Node_T >
-BinTreeNode::BinTreeNode(const Node_T& xdata) {
+BinTreeNode< Node_T >::BinTreeNode(const Node_T& xdata) {
 	data = xdata;
 	parent = NULL;
 	lchild = NULL;
@@ -32,7 +34,7 @@ BinTreeNode::BinTreeNode(const Node_T& xdata) {
 }
 
 template< typename Node_T >
-BinTreeNode::BinTreeNode(const BinTreeNode& copy) {
+BinTreeNode< Node_T >::BinTreeNode(const BinTreeNode& copy) {
 	data = copy.data;
 	parent = copy.parent;
 	lchild = copy.lchild;
