@@ -97,5 +97,6 @@
     <File Name="BinTree.h"/>
     <File Name="BinTreeNode.h"/>
     <File Name="FamilyTree.h"/>
+    <File Name="FamilyMem.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
