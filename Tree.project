@@ -94,7 +94,9 @@
   </Settings>
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
-    <File Name="BinTree.h"/>
-    <File Name="BinTreeNode.h"/>
+    <File Name="node.h"/>
+    <File Name="node.cpp"/>
+    <File Name="familyTree.h"/>
+    <File Name="familyTree.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
